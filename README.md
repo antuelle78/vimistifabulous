@@ -6,6 +6,10 @@ This is my vim setup on Ubuntu
 
 - Vim v8.1.2269 minimum with python 3 support
 - git
+- powerline
+- powerline-fonts
+- ansible-lint
+- yamllint
 
 1. Install the following packages to make sure the YCM framework can build
 
