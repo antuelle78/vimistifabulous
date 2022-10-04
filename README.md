@@ -1,6 +1,10 @@
 # vimistifabulous
 
-This is my vim setup on Ubuntu
+# This is my vim setup on Ubuntu.
+
+To use just copy ".vimrc" file to your home directory and follow the step
+
+below.
 
 **Requirement:**
 
