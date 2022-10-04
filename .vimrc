@@ -4,19 +4,19 @@
 " Avoid modify this section, unless you are very sure of what you are doing
 set background=dark
 
-"let vim_plug_just_installed = 0
-"let vim_plug_path = expand('~/.vim/autoload/plug.vim')
-"if !filereadable(vim_plug_path) echo "Installing Vim-plug..."
-"    echo ""
-"    silent !mkdir -p ~/.vim/autoload
-"    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-"    let vim_plug_just_installed = 1
-"endif
+let vim_plug_just_installed = 0
+let vim_plug_path = expand('~/.vim/autoload/plug.vim')
+if !filereadable(vim_plug_path) echo "Installing Vim-plug..."
+    echo ""
+    silent !mkdir -p ~/.vim/autoload
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    let vim_plug_just_installed = 1
+endif
 "
-"" manually load vim-plug the first time
-"if vim_plug_just_installed
-"    :execute 'source '.fnameescape(vim_plug_path)
-"endif
+" manually load vim-plug the first time
+if vim_plug_just_installed
+    :execute 'source '.fnameescape(vim_plug_path)
+endif
 
 let mapleader = ","
 set runtimepath^=~/.vim/bash-support
@@ -121,8 +121,6 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fisadev/vim-ctrlp-cmdpalette'
 " Zen coding
 Plug 'mattn/emmet-vim'
-" Git integration
-"Plug 'motemen/git-vim'
 " Tab list panel
 Plug 'kien/tabman.vim'
 " Airline
@@ -142,17 +140,11 @@ Plug 'Townk/vim-autoclose'
 Plug 'michaeljsmith/vim-indent-object'
 " Indentation based movements
 Plug 'jeetsukumaran/vim-indentwise'
-" Python autocompletion, go to definition.
-"Plug 'davidhalter/jedi-vim'
-" Better autocompletion
-"Plug 'Shougo/neocomplcache.vim'
-" Snippets manager (SnipMate), dependencies, and snippets repo
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'honza/vim-snippets'
 Plug 'garbas/vim-snipmate'
 let g:snipMate = { 'snippet_version' : 1 }
-" Git/mercurial/others diff icons on the side of the file lines
 Plug 'mhinz/vim-signify'
 " Automatically sort python imports
 Plug 'fisadev/vim-isort'
@@ -170,11 +162,6 @@ if has('python')
     " YAPF formatter for Python
     Plug 'pignacio/vim-yapf-format'
 endif
-" Relative numbering of lines (0 is the current line)
-" (disabled by default because is very intrusive and can't be easily toggled
-" on/off. When the plugin is present, will always activate the relative
-" numbering every time you go to normal mode. Author refuses to add a setting
-" to avoid that)
 Plug 'tpope/vim-repeat'
 Plug 'vim-scripts/visualrepeat'
 Plug 'myusuf3/numbers.vim'
@@ -200,7 +187,6 @@ Plug 'hashivim/vim-terraform'
 let g:terraform_align = 1
 let g:terraform_fmt_on_save = 1
 let g:terraform_fold_sections = 1
-"Plug 'yaegassy/coc-ansible'
 
 " Tell vim-plug we finished declaring plugins, so it can load them
 call plug#end()
