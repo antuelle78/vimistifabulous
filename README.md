@@ -2,7 +2,7 @@
 
 # This is my vim setup on Ubuntu.
 
-To use just copy ".vimrc" file to your home directory and follow the step
+To use just copy ".vimrc" file to your home directory and follow the steps
 
 below.
 
@@ -35,7 +35,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 ```
-3. Start Vim launch plugin installation
+3. Start Vim and launch plugin installation
 
 ```
 :PlugInstall
