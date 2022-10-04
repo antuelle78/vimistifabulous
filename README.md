@@ -1,6 +1,6 @@
 # vimistifabulous
 
-This is my vim setup
+This is my vim setup on Ubuntu
 
 **Requirement:**
 
